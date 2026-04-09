@@ -3,7 +3,7 @@ import os
 
 app = Flask(__name__)
 
-@app.ruote("/")
+@app.route("/")  # ← route に修正
 def home():
     return """
     <h1>アンケート</h1>
@@ -14,12 +14,13 @@ def home():
     </form>
     """
 
-    @app.route("/submit",methods=["POST"])
-    def submit():
+@app.route("/submit", methods=["POST"])  # ← インデント外に出す
+def submit():
     name = request.form["name"]
 
     print(name)
 
-    return f"送信ありがとう{name}!"
-port = int(os.environ.get("PORT",10001))
-app.run(host="0.0.0.0",port=port)
+    return f"送信ありがとう {name}!"
+
+port = int(os.environ.get("PORT", 10001))
+app.run(host="0.0.0.0", port=port)
