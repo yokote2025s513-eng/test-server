@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    return "server running"
+    return "<h1>Hello site</h1><p>My first server</p>"
 
 @app.route("/test")
 def test():
