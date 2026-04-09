@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-GAS_URL = "そのままでOK"
+GAS_URL = "https://script.google.com/macros/s/AKfycbyuuqxRzhMeapSgxp07Hyn7Xnka9H_YmkP36wTpP-U-PAiEEP-sm7u9qy62wT17fg/exec"
 
 @app.route("/")
 def home():
