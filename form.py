@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-GAS_URL = "https://script.google.com/macros/s/AKfycbyuuqxRzhMeapSgxp07Hyn7Xnka9H_YmkP36wTpP-U-PAiEEP-sm7u9qy62wT17fg/exec"
+GAS_URL = "そのままでOK"
 
 @app.route("/")
 def home():
@@ -21,10 +21,10 @@ def home():
 def submit():
     name = request.form["name"]
 
-    # GASへ送信
     requests.post(GAS_URL, json={"name": name})
 
     return f"送信ありがとう {name}!"
 
-port = int(os.environ.get("PORT", 10001))
-app.run(host="0.0.0.0", port=port)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 10001))
+    app.run(host="0.0.0.0", port=port)
