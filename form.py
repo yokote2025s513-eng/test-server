@@ -1,9 +1,12 @@
 from flask import Flask, request
 import os
+import requests
 
 app = Flask(__name__)
 
-@app.route("/")  # ← route に修正
+GAS_URL = "https://script.google.com/macros/s/AKfycbyuuqxRzhMeapSgxp07Hyn7Xnka9H_YmkP36wTpP-U-PAiEEP-sm7u9qy62wT17fg/exec"
+
+@app.route("/")
 def home():
     return """
     <h1>アンケート</h1>
@@ -14,11 +17,12 @@ def home():
     </form>
     """
 
-@app.route("/submit", methods=["POST"])  # ← インデント外に出す
+@app.route("/submit", methods=["POST"])
 def submit():
     name = request.form["name"]
 
-    print(name)
+    # GASへ送信
+    requests.post(GAS_URL, json={"name": name})
 
     return f"送信ありがとう {name}!"
 
