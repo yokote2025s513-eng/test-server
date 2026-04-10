@@ -9,7 +9,7 @@ GAS_URL = "https://script.google.com/macros/s/AKfycbyL0O1jPIiSb_kLNUAkgywSYazZJK
 @app.route("/")
 def home():
     return """
-    <h1>アンケート</h1>
+    <h1>背ネーム入力フォーム</h1>
     <form action="/submit" method="post">
          名前:<br>
          <input type="text" name="name"><br><br>
