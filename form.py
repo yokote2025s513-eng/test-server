@@ -14,7 +14,7 @@ def home():
          名前:<br>
          <input type="text" name="name"><br><br>
          出席番号:<br>
-         <input type="number" name="id"><br><br>
+         <input type="number" name="student_id"><br><br>
          背ネーム:<br>
          <input type="text" name="word"><br><br>
          背番号:<br>
