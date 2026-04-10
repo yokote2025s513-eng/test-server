@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-GAS_URL = "https://script.google.com/macros/s/AKfycbyGeA6ZeSzcxmxMTUJRWyF4OIDCKy7p7j_BJ7XdgQDZj8zYe-4IV-xWr3RamOxF8RNp/exec"
+GAS_URL = "https://script.google.com/macros/s/AKfycbyFt4rM8PnsMJGdJEFQwMlBdkLfnAOrY1eniY2xIi7sP9tfmr1VfSBhXvKIZJETcmhy/exec"
 
 @app.route("/")
 def home():
@@ -25,14 +25,20 @@ def home():
 
 @app.route("/submit", methods=["POST"])
 def submit():
-    name = request.form["name"]
-    id = request.form["id"]
-    word = request.form["word"]
-    number = request.form["number"]
+    name = request.form.get("name", "")
+    student_id = request.form.get("student_id", "")
+    word = request.form.get("word", "")
+    number = request.form.get("number", "")
 
-    requests.post(GAS_URL, json={"name": name,"id": id,"word": word,"number": number})
 
-    return f"送信ありがとう!"
+    res = requests.post(GAS_URL, json={
+        "name": name,
+        "id": student_id,
+        "word": word,
+        "number": number
+    })
+
+    return f"<h2>{res.text}</h2>"
 
 if __name__ == "__main__":
     port = int(os.environ.get("PORT", 10001))
