@@ -13,6 +13,7 @@ def home():
     <form action="/submit" method="post">
          名前:<br>
          <input type="text" name="name"><br><br>
+
          ウィンドブレーカ上:<br>
          <select name="size1">
          <option value="S">S</option>
@@ -21,25 +22,70 @@ def home():
          <option value="XL">XL</option>
          </select><br><br>
          
-         背番号:<br>
-         <input type="number" name="number">
-         <input type="submit" value="送信">
+          ウィンドブレーカ下:<br>
+         <select name="size2">
+         <option value="S">S</option>
+         <option value="M">M</option>
+         <option value="L">L</option>
+         <option value="XL">XL</option>
+         </select><br><br>
+
+          YOKOTE　Tシャツ:<br>
+         <select name="size3">
+         <option value="S">S</option>
+         <option value="M">M</option>
+         <option value="L">L</option>
+         <option value="XL">XL</option>
+         </select><br><br>
+
+          ジャージ上:<br>
+         <select name="size4">
+         <option value="S">S</option>
+         <option value="M">M</option>
+         <option value="L">L</option>
+         <option value="XL">XL</option>
+         </select><br><br>
+
+          ジャージ下:<br>
+         <select name="size5">
+         <option value="S">S</option>
+         <option value="M">M</option>
+         <option value="L">L</option>
+         <option value="XL">XL</option>
+         </select><br><br>
+
+         ユニフォーム上:<br>
+         <input type="redio" name="uni1" value="ランシャツ"> ランシャツ<br>
+         <input type="redio" name"uni1" value="セパ"><br><br>
+
+
+
+
+
+
+
     </form>
     """
 
 @app.route("/submit", methods=["POST"])
 def submit():
     name = request.form.get("name", "")
-    student_id = request.form.get("student_id", "")
-    word = request.form.get("word", "")
-    number = request.form.get("number", "")
-
+    size1 = request.form.get("size1", "")
+    size2 = request.form.get("size2", "")
+    size3 = request.form.get("size3", "")
+    size4 = request.form.get("size4", "")
+    size5 = request.form.get("size5", "")
+    size6 = request.form.get("size6", "")
 
     res = requests.post(GAS_URL, json={
         "name": name,
-        "id": student_id,
-        "word": word,
-        "number": number
+        "size1": size1,
+        "size2": size2,
+        "size3": size3,
+        "size4": size4,
+        "size5": size5,
+        "size6": size6,
+
     })
 
     return f"<h2>{res.text}</h2>"
