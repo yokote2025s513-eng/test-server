@@ -55,15 +55,8 @@ def home():
          </select><br><br>
 
          ユニフォーム上:<br>
-         <input type="redio" name="uni1" value="ランシャツ"> ランシャツ<br>
-         <input type="redio" name"uni1" value="セパ"> セパ<br><br>
-
-
-
-
-
-
-
+         <input type="radio" name="uni1" value="ランシャツ"> ランシャツ<br>
+         <input type="radio" name"uni1" value="セパ"> セパ<br><br>
     </form>
     """
 
@@ -75,7 +68,6 @@ def submit():
     size3 = request.form.get("size3", "")
     size4 = request.form.get("size4", "")
     size5 = request.form.get("size5", "")
-    size6 = request.form.get("size6", "")
     uni1 = request.form.get("uni1", "")
 
     res = requests.post(GAS_URL, json={
@@ -85,10 +77,8 @@ def submit():
         "size3": size3,
         "size4": size4,
         "size5": size5,
-        "size6": size6,
         "uni1": uni1
-
-    })
+        })
 
     return f"<h2>{res.text}</h2>"
 
