@@ -76,6 +76,7 @@ def submit():
     size4 = request.form.get("size4", "")
     size5 = request.form.get("size5", "")
     size6 = request.form.get("size6", "")
+    uni1 = request.form.get("uni1", "")
 
     res = requests.post(GAS_URL, json={
         "name": name,
@@ -85,6 +86,7 @@ def submit():
         "size4": size4,
         "size5": size5,
         "size6": size6,
+        "uni1": uni1
 
     })
 
