@@ -9,7 +9,7 @@ GAS_URL = "https://script.google.com/macros/s/AKfycbyL0O1jPIiSb_kLNUAkgywSYazZJK
 @app.route("/")
 def home():
     return """
-    <h1>サイズ解答フォーム</h1>
+    <h1>サイズ回答フォーム</h1>
     <form action="/submit" method="post">
          名前:<br>
          <input type="text" name="name"><br><br>
@@ -30,7 +30,7 @@ def home():
          <option value="XL">XL</option>
          </select><br><br>
 
-          YOKOTE　Tシャツ:<br>
+          YOKOTE Tシャツ:<br>
          <select name="size3">
          <option value="S">S</option>
          <option value="M">M</option>
@@ -57,6 +57,9 @@ def home():
          ユニフォーム上:<br>
          <input type="radio" name="uni1" value="ランシャツ"> ランシャツ<br>
          <input type="radio" name="uni1" value="セパ"> セパ<br><br>
+
+         <input type="submit" value="送信">
+
     </form>
     """
 
