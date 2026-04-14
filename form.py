@@ -56,7 +56,7 @@ def home():
 
          ユニフォーム上:<br>
          <input type="radio" name="uni1" value="ランシャツ"> ランシャツ<br>
-         <input type="radio" name"uni1" value="セパ"> セパ<br><br>
+         <input type="radio" name="uni1" value="セパ"> セパ<br><br>
     </form>
     """
 
