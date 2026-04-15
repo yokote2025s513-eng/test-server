@@ -14,7 +14,7 @@ def home():
          名前:<br>
          <input type="text" name="name"><br><br>
 
-         ウィンドブレーカ上:<br>
+         ウィンドブレーカ上<br>
          <select name="size1">
          <option value="S">S</option>
          <option value="M">M</option>
@@ -22,7 +22,7 @@ def home():
          <option value="XL">XL</option>
          </select><br><br>
          
-          ウィンドブレーカ下:<br>
+          ウィンドブレーカ下<br>
          <select name="size2">
          <option value="S">S</option>
          <option value="M">M</option>
@@ -30,7 +30,7 @@ def home():
          <option value="XL">XL</option>
          </select><br><br>
 
-          YOKOTE Tシャツ:<br>
+          YOKOTE Tシャツ<br>
          <select name="size3">
          <option value="S">S</option>
          <option value="M">M</option>
@@ -38,7 +38,7 @@ def home():
          <option value="XL">XL</option>
          </select><br><br>
 
-          ジャージ上:<br>
+          ジャージ上<br>
          <select name="size4">
          <option value="S">S</option>
          <option value="M">M</option>
@@ -46,7 +46,7 @@ def home():
          <option value="XL">XL</option>
          </select><br><br>
 
-          ジャージ下:<br>
+          ジャージ下<br>
          <select name="size5">
          <option value="S">S</option>
          <option value="M">M</option>
@@ -54,11 +54,11 @@ def home():
          <option value="XL">XL</option>
          </select><br><br>
 
-         ユニフォーム上(種類):<br>
+         ユニフォーム上(種類)<br>
          <input type="radio" name="uni1" value="ランシャツ"> ランシャツ<br>
          <input type="radio" name="uni1" value="セパ"> セパ<br><br>
 
-        ユニフォーム上(サイズ):<br>
+        ユニフォーム上(サイズ)<br>
         <select name="size6">
         <option value="S">S</option>
         <option value="M">M</option>
@@ -66,11 +66,11 @@ def home():
         <option value="XL">XL</option>
         </select><br><br>
 
-        ユニフォーム下:(種類)<br>
+        ユニフォーム下(種類)<br>
          <input type="radio" name="uni2" value="ランパン"> ランパン<br>
          <input type="radio" name="uni2" value="ショータイ"> ショータイ<br><br>
 
-         ユニフォーム下(サイズ):<br>
+         ユニフォーム下(サイズ)<br>
         <select name="size7">
         <option value="S">S</option>
         <option value="M">M</option>
