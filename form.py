@@ -63,7 +63,7 @@ def home():
         <option value="S">S</option>
         <option value="M">M</option>
         <option value="L">L</option>
-        <option value="XL>XL</option>
+        <option value="XL">XL</option>
         </select><br><br>
 
         ユニフォーム下:<br>
@@ -75,7 +75,7 @@ def home():
         <option value="S">S</option>
         <option value="M">M</option>
         <option value="L">L</option>
-        <option value="XL>XL</option>
+        <option value="XL">XL</option>
         </select><br><br>
 
          <input type="submit" value="送信">
