@@ -54,11 +54,11 @@ def home():
          <option value="XL">XL</option>
          </select><br><br>
 
-         ユニフォーム上:<br>
+         ユニフォーム上(種類):<br>
          <input type="radio" name="uni1" value="ランシャツ"> ランシャツ<br>
          <input type="radio" name="uni1" value="セパ"> セパ<br><br>
 
-        ユニフォーム上:<br>
+        ユニフォーム上(サイズ):<br>
         <select name="size6">
         <option value="S">S</option>
         <option value="M">M</option>
@@ -66,11 +66,11 @@ def home():
         <option value="XL">XL</option>
         </select><br><br>
 
-        ユニフォーム下:<br>
+        ユニフォーム下:(種類)<br>
          <input type="radio" name="uni2" value="ランパン"> ランパン<br>
          <input type="radio" name="uni2" value="ショータイ"> ショータイ<br><br>
 
-         ユニフォーム下:<br>
+         ユニフォーム下(サイズ):<br>
         <select name="size7">
         <option value="S">S</option>
         <option value="M">M</option>
