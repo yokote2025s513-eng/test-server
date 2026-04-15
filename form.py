@@ -4,7 +4,7 @@ import requests
 
 app = Flask(__name__)
 
-GAS_URL = "https://script.google.com/macros/s/AKfycbzxnfKv3pQEy8kVGaxj7yqFpC74BYEQ3F8P1eHOof4Zt0rt-ALLFKdCIfG3ZvIK4EIm/exec"
+GAS_URL = "https://script.google.com/macros/s/AKfycbzGtgi6XpnTY58KF4kb8vssUI6DLcD7pWy-YQJbDUI4B2CKNhhPS-e76iQGLCiCj2Ca/exec"
 
 @app.route("/")
 def home():
@@ -58,6 +58,26 @@ def home():
          <input type="radio" name="uni1" value="ランシャツ"> ランシャツ<br>
          <input type="radio" name="uni1" value="セパ"> セパ<br><br>
 
+        ユニフォーム上:<br>
+        <select name="size6">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL>XL</option>
+        </select><br><br>
+
+        ユニフォーム下:<br>
+         <input type="radio" name="uni2" value="ランパン"> ランパン<br>
+         <input type="radio" name="uni2" value="ショータイ"> ショータイ<br><br>
+
+         ユニフォーム下:<br>
+        <select name="size7">
+        <option value="S">S</option>
+        <option value="M">M</option>
+        <option value="L">L</option>
+        <option value="XL>XL</option>
+        </select><br><br>
+
          <input type="submit" value="送信">
 
     </form>
@@ -72,6 +92,9 @@ def submit():
     size4 = request.form.get("size4", "")
     size5 = request.form.get("size5", "")
     uni1 = request.form.get("uni1", "")
+    size6 = request.form.get("size6", "")
+    uni2 = request.form.get("uni2", "")
+    size7 = request.form.get("size7, "")
 
     res = requests.post(GAS_URL, json={
         "name": name,
@@ -80,7 +103,10 @@ def submit():
         "size3": size3,
         "size4": size4,
         "size5": size5,
-        "uni1": uni1
+        "uni1": uni1,
+        "size6": size6,
+        "uni2": uni2,
+        "size7": size7
         })
 
     return f"<h2>{res.text}</h2>"
