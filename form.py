@@ -94,7 +94,7 @@ def submit():
     uni1 = request.form.get("uni1", "")
     size6 = request.form.get("size6", "")
     uni2 = request.form.get("uni2", "")
-    size7 = request.form.get("size7, "")
+    size7 = request.form.get("size7", "")
 
     res = requests.post(GAS_URL, json={
         "name": name,
